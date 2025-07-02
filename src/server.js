@@ -2,6 +2,8 @@
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
 const { connectDB, getpathLink } = require('./db');
+const Inert = require('@hapi/inert');
+
 
 const init = async () => {
   await connectDB();
@@ -18,6 +20,8 @@ const init = async () => {
     },
   });
   
+  await server.register(Inert);
+
   server.route(routes(pathLink));
 
   await server.start();

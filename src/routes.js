@@ -6,18 +6,15 @@
 const { addPath, redirectPath, deletePath } = require('./handler');
 
 const routes = (pathLink) => [
-//   {
-//     method: 'OPTIONS',
-//     path: '/{any*}',
-//     handler: (request, h) => {
-//         console.log('optionnih');
-//        return h.response()
-//       .header('Access-Control-Allow-Origin', '*')
-//       .header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
-//       .header('Access-Control-Allow-Headers', 'Content-Type')
-//       .code(200);
-//     },
-//   },
+    {
+  method: 'GET',
+  path: '/frontEnd/{param*}',
+  handler: {
+    directory: {
+      path: 'frontEnd',
+    },
+  },
+  },
   {
     method: 'GET',
     path: '/',
@@ -35,7 +32,8 @@ const routes = (pathLink) => [
     method: 'GET',
     path: '/home',
     handler: (request, h) => {
-      return 'ini adalah halaman utama home';
+      console.log('home di bos');
+      return h.file('./frontEnd/main.html');
     },
   },
   {
@@ -47,7 +45,8 @@ const routes = (pathLink) => [
     method: 'DELETE',
     path: '/',
     handler: deletePath(pathLink),
-  }
+  },
+
 
 ];
 
