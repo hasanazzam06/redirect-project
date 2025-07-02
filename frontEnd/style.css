@@ -1,0 +1,455 @@
+:root{
+  --text : #EEEEEE;
+  --primert : #222831;
+  --base : #393E46;
+  --accent : #00ADB5;
+  --accent-hover: #018f99;
+
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primert);
+  color: var(--text);
+}
+
+/* ================= Global Reset (optional) ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+  padding: 12px 40px;
+  border-bottom: 1px solid var(--text);
+  background-color: var(--primert);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header.scrolled {
+  background-color: var(--text); /* warna saat scroll */
+  color: var(--base);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.125rem; /* text-lg */
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.logo a:hover {
+  opacity: 0.5;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 36px;
+}
+
+.nav a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+
+}
+
+.nav a:hover {
+  color: #00ADB5; /* blue-600 */
+}
+
+/* Desktop */
+.menu-toggle {
+  display: none; /* sembunyikan di desktop */
+}
+
+/* Sign Up Button */
+.sign-up-btn {
+  background-color: var(--accent);
+  border: none;
+  border-radius: 12px;
+  height: 40px;
+  padding: 0 16px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.sign-up-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+/* =================  Hero Section  ================= */
+.hero-section {
+  background-color: var(--base);
+  color: var(--text);
+  display: flex;
+  min-height: 80vh;
+  margin-top: 64px;
+  padding: 24px 80px 24px;
+  text-align: center;
+  align-items: center;     /* Center vertical */
+}
+
+.hero-section div {
+  max-width: 768px;
+  margin: 0 auto;
+  font-family:Arial;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: inherit; /* gray-900 */
+  line-height: 1.2;
+  margin-bottom: 24px;
+  letter-spacing: 0.2px;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  color: inherit; /* gray-600 */
+  margin-bottom: 32px;
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: var(--accent); /* blue-600 */
+  color: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 32px;
+  border-radius: 99px; /* rounded-full */
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.hero-button:hover {
+  background-color: var(--accent-hover); /* blue-700 */
+}
+
+/*  ================= Layout dasar  ================= */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 50vh;
+  padding: 40px 16px;
+  background-color: var(--text);
+  color:var(--base);
+  font-family: 'Inter', sans-serif;
+  height: 450px; /* atau tinggi tetap yang kamu mau */
+}
+
+.form-container {
+  width: 100%;
+  max-width: 712px;
+  background-color: white;
+  color: inherit;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Judul */
+.form-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 16px;
+}
+
+.input-group input {
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: #e9edf1;
+  color: #101419;
+}
+
+.input-group input::placeholder {
+  color: #58728d;
+}
+
+.input-group input:focus {
+  outline: 2px solid #2563eb;
+}
+
+/* Submit Button */
+.submit-group {
+  margin-bottom: 12px;
+}
+
+.submit-group button {
+  width: 100%;
+  height: 40px;
+  background-color: #00ADB5;
+  color: #EEEEEE;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submit-group button:hover {
+  background-color: #018f99;
+}
+
+/* Notifikasi */
+.notif {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+/* General notification styles */
+.notif {
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Success notification */
+.notif.success {
+  background-color: #d1fae5; /* Hijau muda */
+  color: #065f46;            /* Hijau gelap */
+}
+
+/* Error notification */
+.notif.error {
+  background-color: #fee2e2; /* Merah muda */
+  color: #991b1b;            /* Merah gelap */
+}
+
+/* Blink animation */
+.blink {
+  animation: blinkAnim 0.3s ease-in-out 2;
+}
+
+@keyframes blinkAnim {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.1; }
+  100% { opacity: 1; }
+}
+
+/* Utility: Hidden */
+.hidden {
+  display: none;
+}
+
+/* =================  Cara Kerja Section =================  */
+.how-it-works {
+  background-color: var(--base);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.how-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.how-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #EEEEEE;
+}
+
+.how-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.step {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.step:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color:  #00ADB5;
+  color: white;
+  font-weight: bold;
+  border-radius: 9999px;
+  margin: 0 auto 12px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.step h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #393E46;
+}
+
+.step p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .how-steps {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .step {
+    flex: 1;
+    margin: 0 12px;
+  }
+  
+}
+
+/* =================  Footer =================  */
+
+.footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text);
+  border-top: 1px solid var(--text);
+
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #2563eb;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #2563eb;
+}
+
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    top: 60px; /* sesuaikan dengan tinggi header */
+    right: 16px;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .sign-up-btn {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text);
+  }
+  .hero-section {
+    padding: 24px 16px;
+    flex-direction: column;
+  }
+
+  .hero-section > div {
+    padding: 0;
+  }
+
+  .header.scrolled .menu-toggle {
+    color: var(--base);
+  }
+}
+
+
