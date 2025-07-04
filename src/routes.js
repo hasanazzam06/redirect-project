@@ -1,19 +1,14 @@
-/* eslint-disable linebreak-style */
-//const { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler, deleteNoteByIdHandler } =  require('./handler');
-//const { getpathLink } = require('./db');
-//const pathLink = getpathLink();
-
 const { addPath, redirectPath, deletePath } = require('./handler');
 
 const routes = (pathLink) => [
-    {
+  {
   method: 'GET',
   path: '/frontEnd/{param*}',
   handler: {
     directory: {
       path: 'frontEnd',
     },
-  },
+   },
   },
   {
     method: 'GET',
