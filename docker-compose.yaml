@@ -4,6 +4,7 @@ services:
     build: .
     image: shortlink
     container_name: shortlink
+    restart: always
     environment:
       - MONGO_URI=mongodb://mongo:27017
       - NODE_ENV=production
@@ -15,6 +16,7 @@ services:
   mongo:
     image: mongo
     container_name: mongo-db
+    restart: always
     volumes:
       - mongo-data:/data/db
     networks:
