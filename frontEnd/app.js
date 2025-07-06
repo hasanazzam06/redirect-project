@@ -27,6 +27,10 @@ document.getElementById('kirim').addEventListener('click', async () => {
         return;
     }
 
+    const API_BASE = window.location.hostname === 'localhost' 
+    ? 'http://localhost:5000' 
+    : 'https://go.michonas.me';
+
     try {
         const res = await fetch('http://localhost:5000/', {
             method: 'POST',

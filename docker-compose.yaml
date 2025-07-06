@@ -3,7 +3,7 @@ services:
   redirect-web:
     build: .
     image: shortlink
-    container_name: shortlink-1
+    container_name: shortlink
     environment:
       - MONGO_URI=mongodb://mongo:27017
       - NODE_ENV=production

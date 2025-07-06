@@ -1,8 +1,8 @@
 /* eslint-disable linebreak-style */
 const Hapi = require('@hapi/hapi');
-const routes = require('./routes');
-const { connectDB, getpathLink } = require('./db');
 const Inert = require('@hapi/inert');
+const { connectDB, getpathLink } = require('./db');
+const routes = require('./routes');
 
 
 const init = async () => {
